@@ -7,7 +7,7 @@ namespace ReleaseManagement.Models {
     public class Release {
         public Release() {
             Features = new List<Feature>();
-            OperatingSystems = new List<ReleaseOperatingSystem>();
+            ReleasePlatforms = new List<ReleasePlatform>();
         }
         public int ReleaseId { get; set; }
         public int ApplicationVersion { get; set; }
@@ -17,7 +17,7 @@ namespace ReleaseManagement.Models {
         public DateTime? UatStartDate { get; set; }
         public DateTime? UatEndDate { get; set; }
         public string ClientApproverName { get; set; }
-        public List<ReleaseOperatingSystem> OperatingSystems { get; set; }
+        public List<ReleasePlatform> ReleasePlatforms { get; set; }
         public List<Feature> Features { get; set; }
         public Client Client { get; set; }
 

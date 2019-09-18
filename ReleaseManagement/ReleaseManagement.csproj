@@ -162,9 +162,10 @@
     </Compile>
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Feature.cs" />
-    <Compile Include="Models\OperatingSystem.cs" />
-    <Compile Include="Models\ReleaseOperatingSystem.cs" />
+    <Compile Include="Models\Platform.cs" />
+    <Compile Include="Models\ReleasePlatform.cs" />
     <Compile Include="Models\Release.cs" />
+    <Compile Include="Models\WorkItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
