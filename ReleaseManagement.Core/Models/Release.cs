@@ -16,7 +16,7 @@ namespace ReleaseManagement.Core.Models {
         public DateTime? UatStartDate { get; set; }
         public DateTime? UatEndDate { get; set; }
         public string ClientApproverName { get; set; }
-
+        public DateTime? ReleaseDate { get; set; }
         public string Notes { get; set; }
         public List<ReleasePlatform> ReleasePlatforms { get; set; }
         public List<Feature> Features { get; set; }
