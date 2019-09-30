@@ -20,9 +20,12 @@ namespace ReleaseManagement.Data.Context {
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) {
             modelBuilder.Properties<string>().Configure(s => s.HasColumnType("varchar").HasMaxLength(250));
+            modelBuilder.Properties<string>().Configure(s => s.HasColumnType("varchar").HasMaxLength(250));
+
             modelBuilder.Entity<Feature>().Property(p => p.StatusCode).HasMaxLength(10);
-            modelBuilder.Entity<Feature>().Property(p => p.TypeCode).HasMaxLength(10);
             modelBuilder.Entity<Release>().Property(p => p.StatusCode).HasMaxLength(10);
+            modelBuilder.Entity<WorkItem>().Property(p => p.StatusCode).HasMaxLength(10);
+            modelBuilder.Entity<WorkItem>().Property(p => p.TypeCode).HasMaxLength(10);
             modelBuilder.Entity<Release>().HasMany(p=>p.Features).WithMany(p=>p.Releases)
                 .Map(rf =>
                 {

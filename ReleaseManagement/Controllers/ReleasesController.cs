@@ -13,7 +13,10 @@ namespace ReleaseManagement.Controllers {
 
         // GET: api/Releases
         public IHttpActionResult GetReleases() {
-            var releases = db.Releases.Include(p => p.Client).Include(p => p.ReleasePlatforms).OrderByDescending(p => p.QaStartDate).ToList();
+            var releases = db.Releases.Include(p => p.Client).Include(p => p.ReleasePlatforms)
+                .Include(p => p.Features)
+                .Include(p => p.WorkItems)
+                .OrderByDescending(p => p.QaStartDate).ToList();
             return Ok(releases);
         }
 
@@ -57,6 +60,8 @@ namespace ReleaseManagement.Controllers {
             entity.QaEndDate = releaseModel.QaEndDate;
             entity.UatStartDate = releaseModel.UatStartDate;
             entity.UatEndDate = releaseModel.UatEndDate;
+            entity.ReleaseDate = releaseModel.ReleaseDate;
+
             //
 
 
@@ -103,8 +108,10 @@ namespace ReleaseManagement.Controllers {
             if (!ModelState.IsValid) {
                 return BadRequest(ModelState);
             }
-            var  entity = db.Releases.Include(p => p.Features).First(p => p.ReleaseId == id);
-            entity.Features.Add(model);
+            var entity = db.Releases.Include(p => p.Features).First(p => p.ReleaseId == id);
+            var feature = db.Features.Find(model.FeatureId);
+
+            entity.Features.Add(feature);
 
             try {
                 db.SaveChanges();

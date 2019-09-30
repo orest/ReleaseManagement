@@ -64,6 +64,10 @@
     <Compile Include="Migrations\201909301246402_add-release-data.Designer.cs">
       <DependentUpon>201909301246402_add-release-data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909301708123_add-api-ui-complete-flag.cs" />
+    <Compile Include="Migrations\201909301708123_add-api-ui-complete-flag.Designer.cs">
+      <DependentUpon>201909301708123_add-api-ui-complete-flag.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909301246402_add-release-data.resx">
       <DependentUpon>201909301246402_add-release-data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909301708123_add-api-ui-complete-flag.resx">
+      <DependentUpon>201909301708123_add-api-ui-complete-flag.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,13 +5,14 @@ using System.Web;
 
 namespace ReleaseManagement.Common {
     public static class Enums {
-        public enum FeatureTypeCodes {
-            Core,
-            Custom
-        }
 
         public enum FeatureStatusCodes {
             New, InProgress, Completed
+        }
+
+        public enum WorkItemTypeCodes {
+
+            Unknown, Bug, Enhancement, Maintenance
         }
     }
 }
