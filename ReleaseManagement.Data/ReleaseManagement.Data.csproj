@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201909272358014_fix-misspell.Designer.cs">
       <DependentUpon>201909272358014_fix-misspell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909301246402_add-release-data.cs" />
+    <Compile Include="Migrations\201909301246402_add-release-data.Designer.cs">
+      <DependentUpon>201909301246402_add-release-data.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909272358014_fix-misspell.resx">
       <DependentUpon>201909272358014_fix-misspell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909301246402_add-release-data.resx">
+      <DependentUpon>201909301246402_add-release-data.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
