@@ -18,7 +18,7 @@ namespace ReleaseManagement.Controllers {
                     .Include(p => p.Features)
                     .Include(p => p.WorkItems)
                     .Where(p => p.ReleaseDate > releaseCutoffDay)
-                    .OrderByDescending(p => p.QaStartDate).ToList();
+                    .OrderBy(p => p.ReleaseDate).ToList();
                 return Ok(releases);
             }
 
