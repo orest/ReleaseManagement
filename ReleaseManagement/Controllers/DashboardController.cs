@@ -21,7 +21,6 @@ namespace ReleaseManagement.Controllers {
                     .OrderBy(p => p.ReleaseDate).ToList();
                 return Ok(releases);
             }
-
         }
     }
 }
