@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace ReleaseManagement.Core.Models {
     public class Release {
         public Release() {
-            Features = new List<Feature>();
+            Features = new List<ReleaseFeature>();
             ReleasePlatforms = new List<ReleasePlatform>();
         }
         public int ReleaseId { get; set; }
@@ -19,7 +19,7 @@ namespace ReleaseManagement.Core.Models {
         public DateTime? ReleaseDate { get; set; }
         public string Notes { get; set; }
         public List<ReleasePlatform> ReleasePlatforms { get; set; }
-        public List<Feature> Features { get; set; }
+        public List<ReleaseFeature> Features { get; set; }
         public List<WorkItem> WorkItems { get; set; }
         public Client Client { get; set; }
 

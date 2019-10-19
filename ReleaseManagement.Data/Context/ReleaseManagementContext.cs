@@ -17,6 +17,7 @@ namespace ReleaseManagement.Data.Context {
         public DbSet<Release> Releases { get; set; }
         public DbSet<ReleasePlatform> ReleasePlatforms { get; set; }
         public DbSet<WorkItem> WorkItems { get; set; }
+        public DbSet<ReleaseFeature> ReleaseFeatures { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) {
             modelBuilder.Properties<string>().Configure(s => s.HasColumnType("varchar").HasMaxLength(250));
@@ -26,13 +27,14 @@ namespace ReleaseManagement.Data.Context {
             modelBuilder.Entity<Release>().Property(p => p.StatusCode).HasMaxLength(10);
             modelBuilder.Entity<WorkItem>().Property(p => p.StatusCode).HasMaxLength(10);
             modelBuilder.Entity<WorkItem>().Property(p => p.TypeCode).HasMaxLength(10);
-            modelBuilder.Entity<Release>().HasMany(p=>p.Features).WithMany(p=>p.Releases)
-                .Map(rf =>
-                {
-                    rf.MapLeftKey("ReleaseId");
-                    rf.MapRightKey("FeaturesId");
-                    rf.ToTable("ReleaseFeatures");
-                });
+            modelBuilder.Entity<ReleaseFeature>().Property(p => p.StatusCode).HasMaxLength(10);
+            //modelBuilder.Entity<Release>().HasMany(p=>p.Features).WithMany(p=>p.Releases)
+            //    .Map(rf =>
+            //    {
+            //        rf.MapLeftKey("ReleaseId");
+            //        rf.MapRightKey("FeaturesId");
+            //        rf.ToTable("ReleaseFeatures");
+            //    });
 
             base.OnModelCreating(modelBuilder);
         }
