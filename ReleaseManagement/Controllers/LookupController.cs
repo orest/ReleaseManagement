@@ -14,7 +14,7 @@ namespace ReleaseManagement.Controllers {
         public IHttpActionResult GetFeatureStatusCodes() {
             var data = new List<LookupBase>() {
                 new LookupBase(){Code ="new", DisplayName = "New"},
-                new LookupBase(){Code ="in-progress", DisplayName = "In Progress"},
+                new LookupBase(){Code ="inprogress", DisplayName = "In Progress"},
                 new LookupBase(){Code ="completed", DisplayName = "Completed"},
             };
             return Ok(data);
@@ -24,7 +24,7 @@ namespace ReleaseManagement.Controllers {
         public IHttpActionResult GetReleaseStatusCodes() {
             var data = new List<LookupBase>() {
                 new LookupBase(){Code ="planning", DisplayName = "Planning"},
-                new LookupBase(){Code ="in-progress", DisplayName = "In Progress"},
+                new LookupBase(){Code ="inprogress", DisplayName = "In Progress"},
                 new LookupBase(){Code ="completed", DisplayName = "Completed"},
             };
             return Ok(data);
