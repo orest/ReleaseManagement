@@ -16,7 +16,7 @@ namespace ReleaseManagement.Controllers {
             var releases = db.Releases.Include(p => p.Client).Include(p => p.ReleasePlatforms)
                 .Include(p => p.Features)
                 .Include(p => p.WorkItems)
-                .OrderByDescending(p => p.QaStartDate).ToList();
+                .OrderByDescending(p => p.ReleaseDate).ToList();
             return Ok(releases);
         }
 
