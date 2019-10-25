@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201909301708123_add-api-ui-complete-flag.Designer.cs">
       <DependentUpon>201909301708123_add-api-ui-complete-flag.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910232236368_add-release-features-table.cs" />
+    <Compile Include="Migrations\201910232236368_add-release-features-table.Designer.cs">
+      <DependentUpon>201910232236368_add-release-features-table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909301708123_add-api-ui-complete-flag.resx">
       <DependentUpon>201909301708123_add-api-ui-complete-flag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910232236368_add-release-features-table.resx">
+      <DependentUpon>201910232236368_add-release-features-table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

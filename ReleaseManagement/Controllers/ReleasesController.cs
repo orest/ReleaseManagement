@@ -27,6 +27,7 @@ namespace ReleaseManagement.Controllers {
                 .Include(p => p.Client)
                 .Include(p => p.ReleasePlatforms)
                 .Include(p => p.Features)
+                .Include("Features.Feature")
                 .Include(p => p.WorkItems)
                 .FirstOrDefault(p => p.ReleaseId == id);
             if (release == null) {
@@ -103,28 +104,28 @@ namespace ReleaseManagement.Controllers {
         }
 
 
-        [Route("api/Releases/{id}/assign")]
-        public IHttpActionResult PostAssignFeature(int id, Feature model) {
-            if (!ModelState.IsValid) {
-                return BadRequest(ModelState);
-            }
-            var entity = db.Releases.Include(p => p.Features).First(p => p.ReleaseId == id);
-            var feature = db.Features.Find(model.FeatureId);
+        //[Route("api/Releases/{id}/assign")]
+        //public IHttpActionResult PostAssignFeature(int id, Feature model) {
+        //    if (!ModelState.IsValid) {
+        //        return BadRequest(ModelState);
+        //    }
+        //    var entity = db.Releases.Include(p => p.Features).First(p => p.ReleaseId == id);
+        //    var feature = db.Features.Find(model.FeatureId);
 
-            entity.Features.Add(feature);
+        //    entity.Features.Add(feature);
 
-            try {
-                db.SaveChanges();
-            } catch (DbUpdateConcurrencyException) {
-                if (!ReleaseExists(id)) {
-                    return NotFound();
-                } else {
-                    throw;
-                }
-            }
+        //    try {
+        //        db.SaveChanges();
+        //    } catch (DbUpdateConcurrencyException) {
+        //        if (!ReleaseExists(id)) {
+        //            return NotFound();
+        //        } else {
+        //            throw;
+        //        }
+        //    }
 
-            return Ok(entity);
-        }
+        //    return Ok(entity);
+        //}
 
 
 

@@ -171,6 +171,7 @@
     <Compile Include="Controllers\FeaturesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LookupController.cs" />
+    <Compile Include="Controllers\ReleaseFeaturesController.cs" />
     <Compile Include="Controllers\ReleasesController.cs" />
     <Compile Include="Controllers\WorkItemsController.cs" />
     <Compile Include="Global.asax.cs">

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseManagement.Core", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseManagement.Data", "ReleaseManagement.Data\ReleaseManagement.Data.csproj", "{AC61B089-8C31-4D6C-86FB-06A149826F6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseManagement.Test", "ReleaseManagement.Test\ReleaseManagement.Test.csproj", "{2D0083C1-2DD4-4ACC-8ADA-9A3C9B88F545}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AC61B089-8C31-4D6C-86FB-06A149826F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC61B089-8C31-4D6C-86FB-06A149826F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC61B089-8C31-4D6C-86FB-06A149826F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D0083C1-2DD4-4ACC-8ADA-9A3C9B88F545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D0083C1-2DD4-4ACC-8ADA-9A3C9B88F545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D0083C1-2DD4-4ACC-8ADA-9A3C9B88F545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D0083C1-2DD4-4ACC-8ADA-9A3C9B88F545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

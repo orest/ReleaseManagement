@@ -10,6 +10,10 @@ namespace ReleaseManagement.Common {
             New, InProgress, Completed
         }
 
+        public enum ReleaseFeatureStatusCodes {
+            New, InProgress, Completed
+        }
+
         public enum WorkItemTypeCodes {
 
             Unknown, Bug, Enhancement, Maintenance

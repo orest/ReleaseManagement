@@ -42,12 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Junk\Calculator.cs" />
     <Compile Include="Models\Base\BaseWorkUnit.cs" />
     <Compile Include="Models\Base\LookupBase.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Feature.cs" />
     <Compile Include="Models\Platform.cs" />
     <Compile Include="Models\Release.cs" />
+    <Compile Include="Models\ReleaseFeature.cs" />
     <Compile Include="Models\ReleasePlatform.cs" />
     <Compile Include="Models\WorkItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
