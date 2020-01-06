@@ -14,9 +14,10 @@ namespace ReleaseManagement.Controllers {
         public IHttpActionResult Get() {
             using (var db = new ReleaseManagementContext()) {
                 var releaseCutoffDay = DateTime.Now.AddDays(-5);
-                
+
                 var releases = db.Releases.Include(p => p.Client).Include(p => p.ReleasePlatforms)
                     .Include(p => p.Features)
+                    .Include("Features.Feature")
                     .Include(p => p.WorkItems)
                     .Where(p => p.StatusCode != "completed")
                     //.Where(p => p.ReleaseDate > releaseCutoffDay)
