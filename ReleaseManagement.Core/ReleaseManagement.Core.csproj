@@ -51,6 +51,7 @@
     <Compile Include="Models\Release.cs" />
     <Compile Include="Models\ReleaseFeature.cs" />
     <Compile Include="Models\ReleasePlatform.cs" />
+    <Compile Include="Models\Report\ClientFeatures.cs" />
     <Compile Include="Models\WorkItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
