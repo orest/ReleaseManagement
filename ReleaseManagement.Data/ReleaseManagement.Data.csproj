@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +73,14 @@
     <Compile Include="Migrations\201910232236368_add-release-features-table.Designer.cs">
       <DependentUpon>201910232236368_add-release-features-table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008271447369_sp-GetClientFeatures.cs" />
+    <Compile Include="Migrations\202008271447369_sp-GetClientFeatures.Designer.cs">
+      <DependentUpon>202008271447369_sp-GetClientFeatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102261654281_alterProc_getClientFeatures.cs" />
+    <Compile Include="Migrations\202102261654281_alterProc_getClientFeatures.Designer.cs">
+      <DependentUpon>202102261654281_alterProc_getClientFeatures.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,6 +109,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910232236368_add-release-features-table.resx">
       <DependentUpon>201910232236368_add-release-features-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008271447369_sp-GetClientFeatures.resx">
+      <DependentUpon>202008271447369_sp-GetClientFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102261654281_alterProc_getClientFeatures.resx">
+      <DependentUpon>202102261654281_alterProc_getClientFeatures.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
